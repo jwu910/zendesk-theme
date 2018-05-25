@@ -1,0 +1,22 @@
+.navbar-filter {
+	@include media-breakpoint-down(sm) {
+		border-bottom: 1px solid;
+		border-top: 1px solid;
+	}
+}
+
+.navbar-toggler-link {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.navbar-underline {
+	.navbar-toggler-link {
+		&:after {
+			@include media-breakpoint-down(sm) {
+				content: none;
+			}
+		}
+	}
+}

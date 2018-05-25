@@ -1,6 +1,6 @@
-/* ---------- Clay base-variables ---------- */
-
 @import "_zendesk-variables";
+
+/* ---------- Clay base-variables ---------- */
 
 @import "functions/_global-functions";
 
@@ -31,6 +31,7 @@
 @import "bootstrap/_nav";
 @import "bootstrap/_navbar";
 @import "bootstrap/_tables";
+@import "bootstrap/_transitions";
 
 @import "components/_buttons";
 @import "components/_forms";
@@ -44,5 +45,6 @@
 
 @import "_zendesk-breadcrumb";
 @import "_zendesk-button";
+@import "_zendesk-navbar";
 @import "_zendesk-pagination";
 @import "_zendesk-requests";

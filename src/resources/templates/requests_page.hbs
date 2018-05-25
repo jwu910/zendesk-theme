@@ -1,16 +1,30 @@
 <div class="container">
 	<h1>My Tickets</h1>
 
-	<nav class="navbar navbar-collapse-absolute navbar-expand-md navbar-underline navigation-bar navigation-bar-light">
-		<ul class="navbar-nav">
+	<nav class="navbar navbar-expand-md navbar-filter navbar-underline">
+		<a aria-label="Toggle Navigation" class="navbar-toggler navbar-toggler-link" data-toggle="collapse" href="javascript:;">
 			{{#each filters}}
-				<li {{#if selected}}aria-selected="true"{{/if}} class="nav-item">
-					<a class="{{#if selected}}active{{/if}} nav-link" {{#unless selected}}href="{{url}}"{{/unless}}>
-						<span class="navbar-text-truncate">{{name}}</span>
-					</a>
-				</li>
+				{{#if selected}}
+					<span class="navbar-text-truncate">{{name}}</span>
+
+					<svg class="lexicon-icon lexicon-icon-caret-bottom">
+						<use xlink:href="#angle-down" />
+					</svg>
+				{{/if}}
 			{{/each}}
-		</ul>
+		</a>
+
+		<div class="collapse navbar-collapse" id="requestActivities">
+			<ul class="navbar-nav">
+				{{#each filters}}
+					<li {{#if selected}}aria-selected="true"{{/if}} class="nav-item">
+						<a class="{{#if selected}}active{{/if}} nav-link" {{#unless selected}}href="{{url}}"{{/unless}}>
+							<span class="navbar-text-truncate">{{name}}</span>
+						</a>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
 	</nav>
 
 	{{#form 'requests_filter' class="request-filter"}}
